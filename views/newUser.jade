@@ -1,0 +1,10 @@
+extends layout
+
+block content
+
+    form(method='POST', action=action)
+        input(name='firstname', type='text', placeholder='First Name', value=user.firstname)
+        br
+        input(name='lastname', type='text', placeholder='Last Name', value=user.lastname)
+        br
+        input(type='submit')

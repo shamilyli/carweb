@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1= title
+    p Show all users info:
+    table
+        tr
+            th First Name
+            th Last Name
+        each user in users
+            tr
+                td
+                    a(href='/users/#{user._id}')= user.firstname
+                td= user.lastname
+                td
+                    a(href='/users/update/#{user._id}') Edit
+                td
+                    a(href='/users/remove/#{user._id}') Remove
+    a(href='/users/add') Add
+    br
+    a(href='/') Search

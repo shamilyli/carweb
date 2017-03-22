@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    a(href='/users') Back
+    h1= user.firstname
+    table
+        tr
+            td= user.firstname
+            td= user.lastname
