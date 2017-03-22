@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //h1= title
+  //p Welcome to #{title}
+  h1 Search Users
+  form(method='POST', action='/users/search')
+    input(name='firstname', type='text', placeholder='User Name')
+    br
+    input(type='submit')
+  a(href='/users') Show All
